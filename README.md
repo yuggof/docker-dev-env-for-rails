@@ -1,24 +1,25 @@
-# README
+# Example of docker development environment for rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+Firstly, install docker and docker-compose:
+```bash
+curl -sSL https://get.docker.com/ | sh
+sudo apt-get install python-pip
+sudo pip install docker-compose
+```
 
-* Ruby version
+Now you can build and start containers using docker-compose:
+```bash
+docker-compose up
+```
 
-* System dependencies
+The application should be running right now but it's ready yet.
+You have to create databases (dev and test) and run migrations:
+```bash
+docker-compose run app rake db:create && rake db:migrate
+```
 
-* Configuration
+Using a browser, go to ```http://localhost/posts```.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For more information visit [this](#) page.
