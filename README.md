@@ -1,5 +1,3 @@
-# Example of docker development environment for rails
-
 ## Installation
 
 Firstly, install docker and docker-compose:
